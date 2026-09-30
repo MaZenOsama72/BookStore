@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Book Store</title>
+    <title>BookStore</title>
 
 </head>
 
@@ -17,441 +17,845 @@
 <body>
 
 
-<!-- Header -->
+    <!-- ==================== HEADER ==================== -->
 
-<header>
+    <header>
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <h1 class="logo">
-            BookStore
-        </h1>
-
-
-        <ul class="nav-links">
-
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#books">Books</a></li>
-
-            <li><a href="#categories">Categories</a></li>
-
-            <li><a href="#about">About</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
+            <h1 class="logo">
+                BookStore
+            </h1>
 
 
-        <button class="login-btn">
-            Login
-        </button>
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#books">Books</a>
+                </li>
+
+                <li>
+                    <a href="#categories">Categories</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
 
 
-    </nav>
-
-</header>
-
-
+<a href="login.html">
+    <button class="login-btn">Login</button>
+</a>
 
 
+        </nav>
 
-<!-- Main -->
-
-<main>
+    </header>
 
 
 
-<!-- Hero Section -->
+    <!-- ==================== MAIN ==================== -->
 
-<section id="home" class="hero">
-
-
-    <h2>
-        Discover Your Next Favorite Book
-    </h2>
+    <main>
 
 
-    <p>
-        Explore thousands of books from different categories.
+        <!-- ==================== HERO ==================== -->
+
+        <section id="home" class="hero">
+
+            <h2>
+                Discover Your Next Favorite Book
+            </h2>
+
+            <p>
+                Explore books from different categories and discover your next favorite read.
+            </p>
+
+            <a href="#books">
+                <button>Explore Books
+                    
+                </button>
+</a>
+
+        </section>
+
+
+
+        <!-- ==================== CATEGORIES ==================== -->
+
+        <section id="categories" class="categories">
+
+            <h2>
+                Explore Categories
+            </h2>
+
+
+            <div class="category-container">
+
+
+                <!-- Programming -->
+
+                <a href="programming.html" class="category-card">
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Programming, coding and software development books.
+                    </p>
+
+                    <span>
+                        View Books →
+                    </span>
+
+                </a>
+
+
+
+                <!-- Self Development -->
+
+                <a href="self-development.html" class="category-card">
+
+                    <h3>
+                        Self Development
+                    </h3>
+
+                    <p>
+                        Books about habits, productivity and personal growth.
+                    </p>
+
+                    <span>
+                        View Books →
+                    </span>
+
+                </a>
+
+
+
+                <!-- Business -->
+
+                <a href="business.html" class="category-card">
+
+                    <h3>
+                        Business
+                    </h3>
+
+                    <p>
+                        Business, management and entrepreneurship books.
+                    </p>
+
+                    <span>
+                        View Books →
+                    </span>
+
+                </a>
+
+
+
+                <!-- Design -->
+
+                <a href="design.html" class="category-card">
+
+                    <h3>
+                        Design
+                    </h3>
+
+                    <p>
+                        Design, creativity and user experience books.
+                    </p>
+
+                    <span>
+                        View Books →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== BOOKS ==================== -->
+
+        <section id="books" class="books">
+
+
+            <!-- ================================================== -->
+            <!-- PROGRAMMING -->
+            <!-- ================================================== -->
+
+            <div class="book-category">
+
+                <h2>
+                    Programming Books
+                </h2>
+
+
+                <div class="book-container">
+
+
+                    <!-- Clean Code -->
+
+                    <div class="book-card">
+
+                        <span class="badge">
+                            NEW
+                        </span>
+
+                        <img
+                            src="./assets/Image/Programming/Clean Code.jpeg"
+                            alt="Clean Code"
+                        >
+
+                        <h3>
+                            Clean Code
+                        </h3>
+
+                        <p>
+                            Robert C. Martin
+                        </p>
+
+                        <p class="description">
+                            A practical guide to writing clean, readable and maintainable code.
+                        </p>
+
+                        <p class="price">
+                            $50
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- The Pragmatic Programmer -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Programming/The Pragmatic Programmer.jpeg"
+                            alt="The Pragmatic Programmer"
+                        >
+
+                        <h3>
+                            The Pragmatic Programmer
+                        </h3>
+
+                        <p>
+                            Andrew Hunt & David Thomas
+                        </p>
+
+                        <p class="description">
+                            Practical techniques and approaches for becoming a better programmer.
+                        </p>
+
+                        <p class="price">
+                            $45
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Design Patterns -->
+
+                    <div class="book-card">
+
+                        <span class="badge">
+                            SALE
+                        </span>
+
+                        <img
+                            src="./assets/Image/Programming/Design Patterns.jpeg"
+                            alt="Design Patterns"
+                        >
+
+                        <h3>
+                            Design Patterns
+                        </h3>
+
+                        <p>
+                            Erich Gamma et al.
+                        </p>
+
+                        <p class="description">
+                            Reusable solutions to common software design problems.
+                        </p>
+
+                        <p class="price">
+                            $60
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <a href="programming.html" class="view-all">
+                    View All Programming Books →
+                </a>
+
+            </div>
+
+
+
+            <!-- ================================================== -->
+            <!-- SELF DEVELOPMENT -->
+            <!-- ================================================== -->
+
+            <div class="book-category">
+
+                <h2>
+                    Self Development Books
+                </h2>
+
+
+                <div class="book-container">
+
+
+                    <!-- Atomic Habits -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Self Development/Atomic Habits.jpeg"
+                            alt="Atomic Habits"
+                        >
+
+                        <h3>
+                            Atomic Habits
+                        </h3>
+
+                        <p>
+                            James Clear
+                        </p>
+
+                        <p class="description">
+                            Small changes that can lead to remarkable results.
+                        </p>
+
+                        <p class="price">
+                            $25
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Deep Work -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Self Development/Deep Work.jpeg"
+                            alt="Deep Work"
+                        >
+
+                        <h3>
+                            Deep Work
+                        </h3>
+
+                        <p>
+                            Cal Newport
+                        </p>
+
+                        <p class="description">
+                            Rules for focused success in a distracted world.
+                        </p>
+
+                        <p class="price">
+                            $35
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- How to Win Friends -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Self Development/How to Win Friends and Influence People.jpeg"
+                            alt="How to Win Friends and Influence People"
+                        >
+
+                        <h3>
+                            How to Win Friends and Influence People
+                        </h3>
+
+                        <p>
+                            Dale Carnegie
+                        </p>
+
+                        <p class="description">
+                            Classic principles for communication and building relationships.
+                        </p>
+
+                        <p class="price">
+                            $30
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <a href="self-development.html" class="view-all">
+                    View All Self Development Books →
+                </a>
+
+            </div>
+
+
+
+            <!-- ================================================== -->
+            <!-- BUSINESS -->
+            <!-- ================================================== -->
+
+            <div class="book-category">
+
+                <h2>
+                    Business Books
+                </h2>
+
+
+                <div class="book-container">
+
+
+                    <!-- Good to Great -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Business/Good to Great .jpeg"
+                            alt="Good to Great"
+                        >
+
+                        <h3>
+                            Good to Great
+                        </h3>
+
+                        <p>
+                            Jim Collins
+                        </p>
+
+                        <p class="description">
+                            Research and ideas about how companies move from good performance to great performance.
+                        </p>
+
+                        <p class="price">
+                            $40
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Rich Dad Poor Dad -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Business/Rich Dad Poor Dad.jpeg"
+                            alt="Rich Dad Poor Dad"
+                        >
+
+                        <h3>
+                            Rich Dad Poor Dad
+                        </h3>
+
+                        <p>
+                            Robert Kiyosaki
+                        </p>
+
+                        <p class="description">
+                            A popular book about financial education and personal finance.
+                        </p>
+
+                        <p class="price">
+                            $30
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Start With Why -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Business/Start with Why.jpeg"
+                            alt="Start With Why"
+                        >
+
+                        <h3>
+                            Start With Why
+                        </h3>
+
+                        <p>
+                            Simon Sinek
+                        </p>
+
+                        <p class="description">
+                            Exploring how purpose can inspire people and organizations.
+                        </p>
+
+                        <p class="price">
+                            $35
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <a href="business.html" class="view-all">
+                    View All Business Books →
+                </a>
+
+            </div>
+
+
+
+            <!-- ================================================== -->
+            <!-- DESIGN -->
+            <!-- ================================================== -->
+
+            <div class="book-category">
+
+                <h2>
+                    Design Books
+                </h2>
+
+
+                <div class="book-container">
+
+
+                    <!-- About Face -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Design/About Face jpeg.jpeg"
+                            alt="About Face"
+                        >
+
+                        <h3>
+                            About Face
+                        </h3>
+
+                        <p>
+                            Alan Cooper
+                        </p>
+
+                        <p class="description">
+                            A comprehensive guide to interaction design and user experience.
+                        </p>
+
+                        <p class="price">
+                            $55
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Designing Interfaces -->
+
+                    <div class="book-card">
+
+                        <img
+                            src="./assets/Image/Design/Designing Interfaces.jpeg"
+                            alt="Designing Interfaces"
+                        >
+
+                        <h3>
+                            Designing Interfaces
+                        </h3>
+
+                        <p>
+                            Jenifer Tidwell
+                        </p>
+
+                        <p class="description">
+                            Patterns and principles for creating effective user interfaces.
+                        </p>
+
+                        <p class="price">
+                            $50
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Don't Make Me Think -->
+
+                    <div class="book-card">
+
+                        <span class="badge">
+                            POPULAR
+                        </span>
+
+                        <img
+                            src="./assets/Image/Design/Don't Make Me Think.jpeg"
+                            alt="Don't Make Me Think"
+                        >
+
+                        <h3>
+                            Don't Make Me Think
+                        </h3>
+
+                        <p>
+                            Steve Krug
+                        </p>
+
+                        <p class="description">
+                            A practical approach to web usability and user-friendly design.
+                        </p>
+
+                        <p class="price">
+                            $45
+                        </p>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <a href="design.html" class="view-all">
+                    View All Design Books →
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================== ABOUT ==================== -->
+
+      <section id="about" class="about">
+
+    <h2>About Us</h2>
+
+    <p class="about-intro">
+        Welcome to BookStore, your place to discover great books
+        from different categories.
     </p>
 
+    <div class="about-content">
 
-    <button>
-        Explore Books
-    </button>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- Books Section -->
-
-<section id="books" class="books">
-
-
-    <h2>
-        Our Books
-    </h2>
-
-
-
-    <div class="book-container">
-
-
-
-        <!-- Book 1 -->
-
-        <div class="book-card">
-
-
-            <span class="badge">
-                NEW
-            </span>
-
-
-            <img src="./assets/Image/BookStore/CleanCode.jpg" alt="Clean Code">
-
-
-            <h3>
-                Clean Code
-            </h3>
-
+        <div class="about-box">
+            <h3>Our Mission</h3>
 
             <p>
-                Robert C. Martin
+                Our mission is to make it easier for readers to find
+                useful and interesting books in one simple place.
             </p>
-
-
-            <p class="description">
-
-                A book about writing clean, readable, and maintainable code.
-
-            </p>
-
-
-            <p class="price">
-                $50
-            </p>
-
-
-            <button>
-                Add To Cart
-            </button>
-
-
         </div>
 
-
-
-
-
-
-        <!-- Book 2 -->
-
-        <div class="book-card">
-
-
-            <img src="./assets/Image/BookStore/The Pragmatic Programmer.jpg" alt="The Pragmatic Programmer">
-
-
-            <h3>
-                The Pragmatic Programmer
-            </h3>
-
+        <div class="about-box">
+            <h3>What We Offer</h3>
 
             <p>
-                Andrew Hunt
+                We offer books in Programming, Self Development,
+                Business and Design.
             </p>
-
-
-            <p class="description">
-
-                Learn practical techniques for becoming a better software developer.
-
-            </p>
-
-
-            <p class="price">
-                $45
-            </p>
-
-
-            <button>
-                Add To Cart
-            </button>
-
-
         </div>
 
-
-
-
-
-
-        <!-- Book 3 -->
-
-        <div class="book-card">
-
-
-            <span class="badge">
-                SALE
-            </span>
-
-
-            <img src="./assets/Image/BookStore/Design Patterns.jpeg" alt="Design Patterns">
-
-
-            <h3>
-                Design Patterns
-            </h3>
-
+        <div class="about-box">
+            <h3>For Everyone</h3>
 
             <p>
-                Gang of Four
+                Whether you are a student, developer, designer or
+                business professional, you can find something useful here.
             </p>
-
-
-            <p class="description">
-
-                A guide to reusable solutions for common software design problems.
-
-            </p>
-
-
-            <p class="price">
-                $60
-            </p>
-
-
-            <button>
-                Add To Cart
-            </button>
-
-
         </div>
-
-
-
-
-
-
-
-        <!-- Book 4 -->
-
-        <div class="book-card">
-
-
-            <img src="./assets/Image/BookStore/Atomic Habits .jpeg" alt="Atomic Habits">
-
-
-            <h3>
-                Atomic Habits
-            </h3>
-
-
-            <p>
-                James Clear
-            </p>
-
-
-            <p class="description">
-
-                Small changes that create remarkable results.
-
-            </p>
-
-
-            <p class="price">
-                $25
-            </p>
-
-
-            <button>
-                Add To Cart
-            </button>
-
-
-        </div>
-
-
-
-
-
-
-        <!-- Book 5 -->
-
-        <div class="book-card">
-
-
-            <img src="./assets/Image/BookStore/The Clean Coder.jpeg" alt="The Clean Coder">
-
-
-            <h3>
-                The Clean Coder
-            </h3>
-
-
-            <p>
-                Robert C. Martin
-            </p>
-
-
-            <p class="description">
-
-                Professional habits for software developers.
-
-            </p>
-
-
-            <p class="price">
-                $40
-            </p>
-
-
-            <button>
-                Add To Cart
-            </button>
-
-
-        </div>
-
-
 
     </div>
 
-
-</section>
-
+        </section>
 
 
 
+        <!-- ==================== CONTACT ==================== -->
 
+        <section id="contact" class="contact-section">
 
+    <h2>Contact Us</h2>
 
-
-
-<!-- Contact Section -->
-
-<section id="contact" class="contact-section">
-
-
-    <h2>
-        Contact Us
-    </h2>
-
-
-    <p>
-        Have any questions? Send us a message!
+    <p class="contact-intro">
+        Have a question or need help? Send us a message.
     </p>
 
+    <div class="contact-content">
 
+        <div class="contact-info">
 
-    <form class="contact-form">
+            <h3>Get In Touch</h3>
 
+            <p>
+                We would love to hear from you.
+                Feel free to contact us anytime.
+            </p>
 
-        <div class="form-group">
+            <p>
+                <strong>Email:</strong>
+                mazen.os.work22@gmail.com
+            </p>
 
-            <label>
-                Full Name
-            </label>
+            <p>
+                <strong>Phone:</strong>
+                +20 1156326040
+            </p>
 
-            <input type="text" placeholder="Enter your name">
+            <p>
+                <strong>Location:</strong>
+                Minya
+            </p>
 
         </div>
 
 
+        <form class="contact-form">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
 
 
-        <div class="form-group">
+            <div class="form-group">
 
-            <label>
-                Email Address
-            </label>
+                <label for="email">
+                    Email Address
+                </label>
 
-            <input type="email" placeholder="Enter your email">
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
 
-        </div>
-
-
-
-
-        <div class="form-group">
-
-            <label>
-                Message
-            </label>
-
-            <textarea rows="5"></textarea>
-
-        </div>
+            </div>
 
 
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Write your message"
+                ></textarea>
+
+            </div>
 
 
-        <button class="submit-btn">
-            Send Message
-        </button>
+            <button class="submit-btn" type="submit">
+                Send Message
+            </button>
 
+        </form>
 
-    </form>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- About Section -->
-
-<section id="about" class="about">
-
-
-    <h2>
-        About Us
-    </h2>
-
-
-    <p>
-        We provide books for developers, students, and readers.
-    </p>
-
+    </div>
 
 </section>
 
 
+    </main>
 
 
 
+    <!-- ==================== FOOTER ==================== -->
 
+    <footer>
 
-<!-- Footer -->
+        <p class="copyright">
+            © 2026 BookStore. All Rights Reserved.
+        </p>
 
-<footer>
-
-
-    <p class="copyright">
-
-        © 2026 BookStore. All Rights Reserved.
-
-    </p>
-
-
-</footer>
-
-
-
-
-</main>
-
+    </footer>
 
 
 </body>
