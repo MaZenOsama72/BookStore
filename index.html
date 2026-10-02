@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +16,7 @@
 
 
 <body>
+    
 
 
     <!-- ==================== HEADER ==================== -->
@@ -53,9 +55,9 @@
             </ul>
 
 
-<a href="login.html">
-    <button class="login-btn">Login</button>
-</a>
+            <a href="login.html">
+                <button class="login-btn">Login</button>
+            </a>
 
 
         </nav>
@@ -64,9 +66,10 @@
 
 
 
-    <!-- ==================== MAIN ==================== -->
+   
 
     <main>
+
 
 
         <!-- ==================== HERO ==================== -->
@@ -82,10 +85,10 @@
             </p>
 
             <a href="#books">
-                <button>Explore Books
-                    
+                <button>
+                    Explore Books
                 </button>
-</a>
+            </a>
 
         </section>
 
@@ -197,6 +200,62 @@
             <!-- PROGRAMMING -->
             <!-- ================================================== -->
 
+          <div class="books-toolbar">
+
+    <div class="search-box">
+
+        <span class="search-icon">🔍</span>
+
+        <input
+            type="text"
+            placeholder="Search books..."
+        >
+
+    </div>
+
+
+    <div class="sort-box">
+
+        <label for="sort">
+            Sort by:
+        </label>
+
+        <select id="sort">
+
+    <option value="default">
+        Default
+    </option>
+
+    <option value="best-selling">
+        Best Selling
+    </option>
+
+    <option value="on-sale">
+        On Sale
+    </option>
+
+    <option value="price-low">
+        Price: Low to High
+    </option>
+
+    <option value="price-high">
+        Price: High to Low
+    </option>
+
+    <option value="name-az">
+        Name: A to Z
+    </option>
+
+    <option value="name-za">
+        Name: Z to A
+    </option>
+
+</select>
+    </div>
+
+</div>
+
+
             <div class="book-category">
 
                 <h2>
@@ -211,7 +270,15 @@
 
                     <div class="book-card">
 
-                        <span class="badge">
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<span class="badge">
                             NEW
                         </span>
 
@@ -229,16 +296,24 @@
                         </p>
 
                         <p class="description">
-                            A practical guide to writing clean, readable and maintainable code.
+                            Write clean and maintainable code
                         </p>
 
                         <p class="price">
                             $50
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=1" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -248,7 +323,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Programming/The Pragmatic Programmer.jpeg"
                             alt="The Pragmatic Programmer"
                         >
@@ -262,16 +345,24 @@
                         </p>
 
                         <p class="description">
-                            Practical techniques and approaches for becoming a better programmer.
+                            Practical techniques for better programming
                         </p>
 
                         <p class="price">
                             $45
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=2" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -281,7 +372,15 @@
 
                     <div class="book-card">
 
-                        <span class="badge">
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<span class="badge">
                             SALE
                         </span>
 
@@ -299,16 +398,24 @@
                         </p>
 
                         <p class="description">
-                            Reusable solutions to common software design problems.
+                            Reusable solutions for software problems
                         </p>
 
                         <p class="price">
                             $60
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=3" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -342,7 +449,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Self Development/Atomic Habits.jpeg"
                             alt="Atomic Habits"
                         >
@@ -356,16 +471,24 @@
                         </p>
 
                         <p class="description">
-                            Small changes that can lead to remarkable results.
+                            Small changes create remarkable results
                         </p>
 
                         <p class="price">
                             $25
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=4" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -375,7 +498,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Self Development/Deep Work.jpeg"
                             alt="Deep Work"
                         >
@@ -389,16 +520,24 @@
                         </p>
 
                         <p class="description">
-                            Rules for focused success in a distracted world.
+                            Rules for focused success
                         </p>
 
                         <p class="price">
                             $35
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=5" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -408,7 +547,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Self Development/How to Win Friends and Influence People.jpeg"
                             alt="How to Win Friends and Influence People"
                         >
@@ -422,16 +569,24 @@
                         </p>
 
                         <p class="description">
-                            Classic principles for communication and building relationships.
+                            Principles for better relationships
                         </p>
 
                         <p class="price">
                             $30
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=6" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -465,7 +620,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Business/Good to Great .jpeg"
                             alt="Good to Great"
                         >
@@ -479,16 +642,24 @@
                         </p>
 
                         <p class="description">
-                            Research and ideas about how companies move from good performance to great performance.
+                            Ideas for improving business performance
                         </p>
 
                         <p class="price">
                             $40
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=7" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -498,7 +669,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Business/Rich Dad Poor Dad.jpeg"
                             alt="Rich Dad Poor Dad"
                         >
@@ -512,16 +691,24 @@
                         </p>
 
                         <p class="description">
-                            A popular book about financial education and personal finance.
+                            Lessons about financial education
                         </p>
 
                         <p class="price">
                             $30
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=8" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -531,7 +718,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Business/Start with Why.jpeg"
                             alt="Start With Why"
                         >
@@ -545,16 +740,24 @@
                         </p>
 
                         <p class="description">
-                            Exploring how purpose can inspire people and organizations.
+                            Purpose that inspires organizations
                         </p>
 
                         <p class="price">
                             $35
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=9" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -588,7 +791,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Design/About Face jpeg.jpeg"
                             alt="About Face"
                         >
@@ -602,16 +813,24 @@
                         </p>
 
                         <p class="description">
-                            A comprehensive guide to interaction design and user experience.
+                            Guide to interaction and user experience
                         </p>
 
                         <p class="price">
                             $55
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=10" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -621,7 +840,15 @@
 
                     <div class="book-card">
 
-                        <img
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<img
                             src="./assets/Image/Design/Designing Interfaces.jpeg"
                             alt="Designing Interfaces"
                         >
@@ -635,16 +862,24 @@
                         </p>
 
                         <p class="description">
-                            Patterns and principles for creating effective user interfaces.
+                            Patterns for effective user interfaces
                         </p>
 
                         <p class="price">
                             $50
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=11" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -654,7 +889,15 @@
 
                     <div class="book-card">
 
-                        <span class="badge">
+                        
+                        <button
+                            class="favorite-btn"
+                            aria-label="Add to favorites"
+                        >
+                            ♡
+                        </button>
+
+<span class="badge">
                             POPULAR
                         </span>
 
@@ -672,16 +915,24 @@
                         </p>
 
                         <p class="description">
-                            A practical approach to web usability and user-friendly design.
+                            Practical guide to web usability
                         </p>
 
                         <p class="price">
                             $45
                         </p>
 
-                        <button>
-                            Add To Cart
-                        </button>
+                        <div class="book-buttons">
+
+                            <a href="details.html?id=12" class="details-btn">
+                                View Details
+                            </a>
+
+                            <button>
+                                Add To Cart
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -702,45 +953,62 @@
 
         <!-- ==================== ABOUT ==================== -->
 
-      <section id="about" class="about">
+        <section id="about" class="about">
 
-    <h2>About Us</h2>
+            <h2>
+                About Us
+            </h2>
 
-    <p class="about-intro">
-        Welcome to BookStore, your place to discover great books
-        from different categories.
-    </p>
-
-    <div class="about-content">
-
-        <div class="about-box">
-            <h3>Our Mission</h3>
-
-            <p>
-                Our mission is to make it easier for readers to find
-                useful and interesting books in one simple place.
+            <p class="about-intro">
+                Welcome to BookStore, your place to discover great books
+                from different categories.
             </p>
-        </div>
 
-        <div class="about-box">
-            <h3>What We Offer</h3>
 
-            <p>
-                We offer books in Programming, Self Development,
-                Business and Design.
-            </p>
-        </div>
+            <div class="about-content">
 
-        <div class="about-box">
-            <h3>For Everyone</h3>
+                <div class="about-box">
 
-            <p>
-                Whether you are a student, developer, designer or
-                business professional, you can find something useful here.
-            </p>
-        </div>
+                    <h3>
+                        Our Mission
+                    </h3>
 
-    </div>
+                    <p>
+                        Our mission is to make it easier for readers to find
+                        useful and interesting books in one simple place.
+                    </p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>
+                        What We Offer
+                    </h3>
+
+                    <p>
+                        We offer books in Programming, Self Development,
+                        Business and Design.
+                    </p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>
+                        For Everyone
+                    </h3>
+
+                    <p>
+                        Whether you are a student, developer, designer or
+                        business professional, you can find something useful here.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -750,97 +1018,104 @@
 
         <section id="contact" class="contact-section">
 
-    <h2>Contact Us</h2>
+            <h2>
+                Contact Us
+            </h2>
 
-    <p class="contact-intro">
-        Have a question or need help? Send us a message.
-    </p>
-
-    <div class="contact-content">
-
-        <div class="contact-info">
-
-            <h3>Get In Touch</h3>
-
-            <p>
-                We would love to hear from you.
-                Feel free to contact us anytime.
+            <p class="contact-intro">
+                Have a question or need help? Send us a message.
             </p>
 
-            <p>
-                <strong>Email:</strong>
-                mazen.os.work22@gmail.com
-            </p>
 
-            <p>
-                <strong>Phone:</strong>
-                +20 1156326040
-            </p>
-
-            <p>
-                <strong>Location:</strong>
-                Minya
-            </p>
-
-        </div>
+            <div class="contact-content">
 
 
-        <form class="contact-form">
+                <div class="contact-info">
 
-            <div class="form-group">
+                    <h3>
+                        Get In Touch
+                    </h3>
 
-                <label for="name">
-                    Full Name
-                </label>
+                    <p>
+                        We would love to hear from you.
+                        Feel free to contact us anytime.
+                    </p>
 
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                >
+                    <p>
+                        <strong>Email:</strong>
+                        mazen.os.work22@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        +20 1156326040
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        Minya
+                    </p>
+
+                </div>
+
+
+
+                <form class="contact-form">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="6"
+                            placeholder="Write your message"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button class="submit-btn" type="submit">
+                        Send Message
+                    </button>
+
+                </form>
 
             </div>
 
-
-            <div class="form-group">
-
-                <label for="email">
-                    Email Address
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="message">
-                    Message
-                </label>
-
-                <textarea
-                    id="message"
-                    rows="6"
-                    placeholder="Write your message"
-                ></textarea>
-
-            </div>
-
-
-            <button class="submit-btn" type="submit">
-                Send Message
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
+        </section>
 
 
     </main>
