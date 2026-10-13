@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +8,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <title>Self Development Books - BookStore</title>
+    <title>Programming Books - BookStore</title>
 
 </head>
 
@@ -31,17 +32,17 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="../index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="self-development.html">Self Development</a>
+                    <a href="programming.html">Programming</a>
                 </li>
 
             </ul>
 
 
-            <a href="login.html">
+            <a href="../auth/login.html">
                 <button class="login-btn">Login</button>
             </a>
 
@@ -58,46 +59,46 @@
         <section class="books">
 
             <h2>
-                Self Development Books
+                Programming Books
             </h2>
 
 
             <div class="book-container">
 
 
-                <!-- Atomic Habits -->
+                <!-- Clean Code -->
 
                 <div class="book-card">
 
                     <span class="badge">
-                        POPULAR
+                        NEW
                     </span>
 
                     <img
-                        src="./assets/Image/Self Development/Atomic Habits.jpeg"
-                        alt="Atomic Habits"
+                        src="../assets/Image/Programming/Clean Code.jpeg"
+                        alt="Clean Code"
                     >
 
                     <h3>
-                        Atomic Habits
+                        Clean Code
                     </h3>
 
                     <p>
-                        James Clear
+                        Robert C. Martin
                     </p>
 
                     <p class="description">
-                        Small changes create remarkable results
+                        Write clean and maintainable code
                     </p>
 
                     <p class="price">
-                        $25
+                        $50
                     </p>
 
                     <div class="book-buttons">
 
                         <a
-                            href="details.html?id=7"
+                            href="../details.html?id=1"
                             class="details-btn"
                         >
                             View Details
@@ -113,25 +114,117 @@
 
 
 
-                <!-- The 7 Habits -->
+                <!-- The Pragmatic Programmer -->
 
                 <div class="book-card">
 
                     <img
-                        src="./assets/Image/Self Development/The 7 Habits of Highly Effective People.jpg"
-                        alt="The 7 Habits of Highly Effective People"
+                        src="../assets/Image/Programming/The Pragmatic Programmer.jpeg"
+                        alt="The Pragmatic Programmer"
                     >
 
                     <h3>
-                        The 7 Habits of Highly Effective People
+                        The Pragmatic Programmer
                     </h3>
 
                     <p>
-                        Stephen R. Covey
+                        Andrew Hunt & David Thomas
                     </p>
 
                     <p class="description">
-                        Principles for personal effectiveness
+                        Practical techniques for better programming
+                    </p>
+
+                    <p class="price">
+                        $45
+                    </p>
+
+                    <div class="book-buttons">
+
+                        <a
+                            href="../details.html?id=2"
+                            class="details-btn"
+                        >
+                            View Details
+                        </a>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Design Patterns -->
+
+                <div class="book-card">
+
+                    <span class="badge">
+                        SALE
+                    </span>
+
+                    <img
+                        src="../assets/Image/Programming/Design Patterns.jpeg"
+                        alt="Design Patterns"
+                    >
+
+                    <h3>
+                        Design Patterns
+                    </h3>
+
+                    <p>
+                        Erich Gamma et al.
+                    </p>
+
+                    <p class="description">
+                        Reusable solutions for software problems
+                    </p>
+
+                    <p class="price">
+                        $60
+                    </p>
+
+                    <div class="book-buttons">
+
+                        <a
+                            href="../details.html?id=3"
+                            class="details-btn"
+                        >
+                            View Details
+                        </a>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- The Clean Coder -->
+
+                <div class="book-card">
+
+                    <img
+                        src="../assets/Image/Programming/The Clean Coder.jpeg"
+                        alt="The Clean Coder"
+                    >
+
+                    <h3>
+                        The Clean Coder
+                    </h3>
+
+                    <p>
+                        Robert C. Martin
+                    </p>
+
+                    <p class="description">
+                        Professional practices for software developers
                     </p>
 
                     <p class="price">
@@ -141,7 +234,7 @@
                     <div class="book-buttons">
 
                         <a
-                            href="details.html?id=8"
+                            href="../details.html?id=4"
                             class="details-btn"
                         >
                             View Details
@@ -157,35 +250,35 @@
 
 
 
-                <!-- Deep Work -->
+                <!-- Refactoring -->
 
                 <div class="book-card">
 
                     <img
-                        src="./assets/Image/Self Development/Deep Work.jpeg"
-                        alt="Deep Work"
+                        src="../assets/Image/Programming/Refactoring.jpeg"
+                        alt="Refactoring"
                     >
 
                     <h3>
-                        Deep Work
+                        Refactoring
                     </h3>
 
                     <p>
-                        Cal Newport
+                        Martin Fowler
                     </p>
 
                     <p class="description">
-                        Rules for focused success
+                        Improve existing code safely
                     </p>
 
                     <p class="price">
-                        $35
+                        $55
                     </p>
 
                     <div class="book-buttons">
 
                         <a
-                            href="details.html?id=9"
+                            href="../details.html?id=5"
                             class="details-btn"
                         >
                             View Details
@@ -201,123 +294,35 @@
 
 
 
-                <!-- The Power of Habit -->
+                <!-- Head First Design Patterns -->
 
                 <div class="book-card">
 
                     <img
-                        src="./assets/Image/Self Development/The Power of Habit.jpeg"
-                        alt="The Power of Habit"
+                        src="../assets/Image/Programming/Head First Design Patterns.jpg"
+                        alt="Head First Design Patterns"
                     >
 
                     <h3>
-                        The Power of Habit
+                        Head First Design Patterns
                     </h3>
 
                     <p>
-                        Charles Duhigg
+                        Eric Freeman & Elisabeth Robson
                     </p>
 
                     <p class="description">
-                        Understanding and changing habits
+                        Beginner-friendly design patterns guide
                     </p>
 
                     <p class="price">
-                        $30
+                        $50
                     </p>
 
                     <div class="book-buttons">
 
                         <a
-                            href="details.html?id=10"
-                            class="details-btn"
-                        >
-                            View Details
-                        </a>
-
-                        <button>
-                            Add To Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Think and Grow Rich -->
-
-                <div class="book-card">
-
-                    <img
-                        src="./assets/Image/Self Development/Think and Grow Rich.jpeg"
-                        alt="Think and Grow Rich"
-                    >
-
-                    <h3>
-                        Think and Grow Rich
-                    </h3>
-
-                    <p>
-                        Napoleon Hill
-                    </p>
-
-                    <p class="description">
-                        Ideas for goals and achievement
-                    </p>
-
-                    <p class="price">
-                        $30
-                    </p>
-
-                    <div class="book-buttons">
-
-                        <a
-                            href="details.html?id=11"
-                            class="details-btn"
-                        >
-                            View Details
-                        </a>
-
-                        <button>
-                            Add To Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- How to Win Friends -->
-
-                <div class="book-card">
-
-                    <img
-                        src="./assets/Image/Self Development/How to Win Friends and Influence People.jpeg"
-                        alt="How to Win Friends and Influence People"
-                    >
-
-                    <h3>
-                        How to Win Friends and Influence People
-                    </h3>
-
-                    <p>
-                        Dale Carnegie
-                    </p>
-
-                    <p class="description">
-                        Principles for better relationships
-                    </p>
-
-                    <p class="price">
-                        $30
-                    </p>
-
-                    <div class="book-buttons">
-
-                        <a
-                            href="details.html?id=12"
+                            href="../details.html?id=6"
                             class="details-btn"
                         >
                             View Details

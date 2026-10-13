@@ -1,16 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <title>Programming Books - BookStore</title>
+    <title>Design Books - BookStore</title>
 
 </head>
 
@@ -32,18 +30,20 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="../index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="programming.html">Programming</a>
+                    <a href="design.html">Design</a>
                 </li>
 
             </ul>
 
 
-            <a href="login.html">
-                <button class="login-btn">Login</button>
+            <a href="../auth/login.html">
+                <button class="login-btn">
+                    Login
+                </button>
             </a>
 
         </nav>
@@ -59,80 +59,36 @@
         <section class="books">
 
             <h2>
-                Programming Books
+                Design Books
             </h2>
 
 
             <div class="book-container">
 
 
-                <!-- Clean Code -->
+                <!-- Don't Make Me Think -->
 
                 <div class="book-card">
 
                     <span class="badge">
-                        NEW
+                        POPULAR
                     </span>
 
                     <img
-                        src="./assets/Image/Programming/Clean Code.jpeg"
-                        alt="Clean Code"
+                        src="../assets/Image/Design/Don't Make Me Think.jpeg"
+                        alt="Don't Make Me Think"
                     >
 
                     <h3>
-                        Clean Code
+                        Don't Make Me Think
                     </h3>
 
                     <p>
-                        Robert C. Martin
+                        Steve Krug
                     </p>
 
                     <p class="description">
-                        Write clean and maintainable code
-                    </p>
-
-                    <p class="price">
-                        $50
-                    </p>
-
-                    <div class="book-buttons">
-
-                        <a
-                            href="details.html?id=1"
-                            class="details-btn"
-                        >
-                            View Details
-                        </a>
-
-                        <button>
-                            Add To Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- The Pragmatic Programmer -->
-
-                <div class="book-card">
-
-                    <img
-                        src="./assets/Image/Programming/The Pragmatic Programmer.jpeg"
-                        alt="The Pragmatic Programmer"
-                    >
-
-                    <h3>
-                        The Pragmatic Programmer
-                    </h3>
-
-                    <p>
-                        Andrew Hunt & David Thomas
-                    </p>
-
-                    <p class="description">
-                        Practical techniques for better programming
+                        Practical guide to web usability
                     </p>
 
                     <p class="price">
@@ -142,7 +98,7 @@
                     <div class="book-buttons">
 
                         <a
-                            href="details.html?id=2"
+                            href="../details.html?id=19"
                             class="details-btn"
                         >
                             View Details
@@ -158,161 +114,25 @@
 
 
 
-                <!-- Design Patterns -->
-
-                <div class="book-card">
-
-                    <span class="badge">
-                        SALE
-                    </span>
-
-                    <img
-                        src="./assets/Image/Programming/Design Patterns.jpeg"
-                        alt="Design Patterns"
-                    >
-
-                    <h3>
-                        Design Patterns
-                    </h3>
-
-                    <p>
-                        Erich Gamma et al.
-                    </p>
-
-                    <p class="description">
-                        Reusable solutions for software problems
-                    </p>
-
-                    <p class="price">
-                        $60
-                    </p>
-
-                    <div class="book-buttons">
-
-                        <a
-                            href="details.html?id=3"
-                            class="details-btn"
-                        >
-                            View Details
-                        </a>
-
-                        <button>
-                            Add To Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- The Clean Coder -->
+                <!-- The Design of Everyday Things -->
 
                 <div class="book-card">
 
                     <img
-                        src="./assets/Image/Programming/The Clean Coder.jpeg"
-                        alt="The Clean Coder"
+                        src="../assets/Image/Design/The Design of Everyday Things.jpeg"
+                        alt="The Design of Everyday Things"
                     >
 
                     <h3>
-                        The Clean Coder
+                        The Design of Everyday Things
                     </h3>
 
                     <p>
-                        Robert C. Martin
+                        Don Norman
                     </p>
 
                     <p class="description">
-                        Professional practices for software developers
-                    </p>
-
-                    <p class="price">
-                        $40
-                    </p>
-
-                    <div class="book-buttons">
-
-                        <a
-                            href="details.html?id=4"
-                            class="details-btn"
-                        >
-                            View Details
-                        </a>
-
-                        <button>
-                            Add To Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Refactoring -->
-
-                <div class="book-card">
-
-                    <img
-                        src="./assets/Image/Programming/Refactoring.jpeg"
-                        alt="Refactoring"
-                    >
-
-                    <h3>
-                        Refactoring
-                    </h3>
-
-                    <p>
-                        Martin Fowler
-                    </p>
-
-                    <p class="description">
-                        Improve existing code safely
-                    </p>
-
-                    <p class="price">
-                        $55
-                    </p>
-
-                    <div class="book-buttons">
-
-                        <a
-                            href="details.html?id=5"
-                            class="details-btn"
-                        >
-                            View Details
-                        </a>
-
-                        <button>
-                            Add To Cart
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Head First Design Patterns -->
-
-                <div class="book-card">
-
-                    <img
-                        src="./assets/Image/Programming/Head First Design Patterns.jpg"
-                        alt="Head First Design Patterns"
-                    >
-
-                    <h3>
-                        Head First Design Patterns
-                    </h3>
-
-                    <p>
-                        Eric Freeman & Elisabeth Robson
-                    </p>
-
-                    <p class="description">
-                        Beginner-friendly design patterns guide
+                        Principles of user-friendly design
                     </p>
 
                     <p class="price">
@@ -322,7 +142,187 @@
                     <div class="book-buttons">
 
                         <a
-                            href="details.html?id=6"
+                            href="../details.html?id=20"
+                            class="details-btn"
+                        >
+                            View Details
+                        </a>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Universal Principles of Design -->
+
+                <div class="book-card">
+
+                    <img
+                        src="../assets/Image/Design/Universal Principles of Design.jpeg"
+                        alt="Universal Principles of Design"
+                    >
+
+                    <h3>
+                        Universal Principles of Design
+                    </h3>
+
+                    <p>
+                        William Lidwell et al.
+                    </p>
+
+                    <p class="description">
+                        Essential principles for effective design
+                    </p>
+
+                    <p class="price">
+                        $55
+                    </p>
+
+                    <div class="book-buttons">
+
+                        <a
+                            href="../details.html?id=21"
+                            class="details-btn"
+                        >
+                            View Details
+                        </a>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Designing Interfaces -->
+
+                <div class="book-card">
+
+                    <img
+                        src="../assets/Image/Design/Designing Interfaces.jpeg"
+                        alt="Designing Interfaces"
+                    >
+
+                    <h3>
+                        Designing Interfaces
+                    </h3>
+
+                    <p>
+                        Jenifer Tidwell
+                    </p>
+
+                    <p class="description">
+                        Patterns for effective user interfaces
+                    </p>
+
+                    <p class="price">
+                        $50
+                    </p>
+
+                    <div class="book-buttons">
+
+                        <a
+                            href="../details.html?id=22"
+                            class="details-btn"
+                        >
+                            View Details
+                        </a>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- About Face -->
+
+                <div class="book-card">
+
+                    <span class="badge">
+                        NEW
+                    </span>
+
+                    <img
+                        src="../assets/Image/Design/About Face jpeg.jpeg"
+                        alt="About Face"
+                    >
+
+                    <h3>
+                        About Face
+                    </h3>
+
+                    <p>
+                        Alan Cooper et al.
+                    </p>
+
+                    <p class="description">
+                        Guide to interaction and user experience
+                    </p>
+
+                    <p class="price">
+                        $55
+                    </p>
+
+                    <div class="book-buttons">
+
+                        <a
+                            href="../details.html?id=23"
+                            class="details-btn"
+                        >
+                            View Details
+                        </a>
+
+                        <button>
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Sprint -->
+
+                <div class="book-card">
+
+                    <img
+                        src="../assets/Image/Design/Sprint.jpeg"
+                        alt="Sprint"
+                    >
+
+                    <h3>
+                        Sprint
+                    </h3>
+
+                    <p>
+                        Jake Knapp et al.
+                    </p>
+
+                    <p class="description">
+                        Process for solving problems quickly
+                    </p>
+
+                    <p class="price">
+                        $45
+                    </p>
+
+                    <div class="book-buttons">
+
+                        <a
+                            href="../details.html?id=24"
                             class="details-btn"
                         >
                             View Details
@@ -359,4 +359,3 @@
 </body>
 
 </html>
-
