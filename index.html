@@ -23,44 +23,52 @@
 
     <header>
 
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <button
+                class="sidebar-toggle"
+                id="open-sidebar"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="sidebar"
+                aria-expanded="false"
+            >☰</button>
 
             <h1 class="logo">
                 BookStore
             </h1>
 
-
             <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#books">Books</a>
-                </li>
-
-                <li>
-                    <a href="#categories">Categories</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+                <li><a href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-
-            <a href="auth/login.html">
-                <button class="login-btn">Login</button>
+            <a class="login-link" href="auth/login.html">
+                <button class="login-btn" type="button">Login</button>
             </a>
 
-
         </nav>
+
+        <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+
+        <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Sidebar navigation" inert>
+            <div class="sidebar-header">
+                <h2>BookStore</h2>
+                <button class="sidebar-close" id="close-sidebar" type="button" aria-label="Close navigation menu">×</button>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Sidebar links">
+                <a href="#home">Home</a>
+                <a href="#books">Books</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="auth/login.html">Login</a>
+            </nav>
+        </aside>
 
     </header>
 
@@ -1132,6 +1140,9 @@
 
     </footer>
 
+
+
+    <script src="js/script.js"></script>
 
 </body>
 

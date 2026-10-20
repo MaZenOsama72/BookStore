@@ -1759,3 +1759,263 @@ footer a:hover {
     }
 
 }
+
+/* ==================================================
+   RESPONSIVE SIDEBAR NAVIGATION
+   Desktop: sidebar enters from the left.
+   Narrow screens: sidebar enters from the right.
+================================================== */
+
+.navbar {
+    gap: 18px;
+}
+
+.navbar .sidebar-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--ink-900);
+    font-size: 1.45rem;
+    line-height: 1;
+    box-shadow: none;
+}
+
+.navbar .sidebar-toggle:hover {
+    background: var(--paper-2);
+    color: var(--ink-900);
+    box-shadow: var(--shadow-sm);
+    transform: none;
+}
+
+.navbar .logo {
+    flex: 0 0 auto;
+}
+
+.navbar .nav-links {
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: clamp(14px, 2.2vw, 32px);
+}
+
+.navbar .login-link {
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+.navbar .login-btn {
+    cursor: pointer;
+}
+
+.sidebar-overlay[hidden] {
+    display: none !important;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1998;
+    background: rgba(7, 20, 18, 0.48);
+    opacity: 0;
+    transition: opacity 260ms var(--ease);
+}
+
+.sidebar-overlay.is-visible {
+    opacity: 1;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 1999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(360px, 88vw);
+    padding: 28px 24px;
+    overflow-y: auto;
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition:
+        transform 280ms var(--ease),
+        visibility 0s linear 280ms;
+}
+
+.sidebar.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    transition:
+        transform 280ms var(--ease),
+        visibility 0s;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.65rem;
+}
+
+.sidebar .sidebar-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    color: var(--ink-900);
+    font-size: 1.8rem;
+    line-height: 1;
+    box-shadow: none;
+}
+
+.sidebar .sidebar-close:hover {
+    background: var(--paper-2);
+    transform: none;
+    box-shadow: none;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 18px;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 13px 14px;
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-weight: 550;
+    text-decoration: none;
+    transition:
+        background-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease),
+        padding-left var(--dur-fast) var(--ease);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a:focus-visible {
+    padding-left: 19px;
+    background: var(--paper-2);
+    color: var(--ink-900);
+}
+
+body.sidebar-open {
+    overflow: hidden;
+}
+
+/* Hide the desktop inline links when the navbar no longer has enough room. */
+@media (max-width: 1000px) {
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .logo {
+        margin-right: auto;
+    }
+
+    .sidebar {
+        left: auto;
+        right: 0;
+        border-right: 0;
+        border-left: 1px solid var(--line);
+        transform: translateX(105%);
+    }
+
+    .sidebar.is-open {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 94%;
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .navbar .sidebar-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar .logo {
+        font-size: 1.25rem;
+    }
+
+    .navbar .login-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .sidebar {
+        width: min(320px, 90vw);
+        padding: 22px 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar,
+    .sidebar-overlay {
+        transition: none;
+    }
+}
+
+
+/* Final responsive behavior: sidebar is mobile/tablet only and always slides from the left. */
+.navbar .sidebar-toggle {
+    display: none;
+}
+
+/* Keep the sidebar and its overlay completely out of the desktop layout. */
+.sidebar,
+.sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .navbar .sidebar-toggle {
+        display: inline-flex;
+    }
+
+    .sidebar {
+        display: block;
+        left: 0;
+        right: auto;
+        border-left: 0;
+        border-right: 1px solid var(--line);
+        transform: translateX(-105%);
+    }
+
+    .sidebar.is-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        display: block;
+    }
+}
