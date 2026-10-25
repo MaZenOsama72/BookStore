@@ -39,9 +39,7 @@
 
         </ul>
 
-        <a href="login.html">
-            <button class="login-btn">Login</button>
-        </a>
+        <a class="login-btn" href="login.html">Login</a>
 
     </nav>
 
@@ -76,6 +74,8 @@
                         type="text"
                         id="fullname"
                         placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
                     >
 
                 </div>
@@ -93,6 +93,8 @@
                         type="email"
                         id="register-email"
                         placeholder="Enter your email"
+                        autocomplete="email"
+                        required
                     >
 
                 </div>
@@ -110,6 +112,9 @@
                         type="password"
                         id="register-password"
                         placeholder="Create a password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
                     >
 
                 </div>
@@ -127,6 +132,8 @@
                         type="password"
                         id="confirm-password"
                         placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        required
                     >
 
                 </div>
@@ -138,7 +145,7 @@
 
                     <label>
 
-                        <input type="checkbox">
+                        <input type="checkbox" required>
 
                         I agree to the Terms and Conditions
 
@@ -194,6 +201,7 @@
 
 </footer>
 
+<script src="../js/script.js"></script>
 
 </body>
 

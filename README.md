@@ -12,7 +12,9 @@ A responsive bookstore website built with **HTML, CSS, and JavaScript**. The pro
   - Self Development
 - **Authentication Pages:** Login, registration, forgot password, reset password, and verification interfaces.
 - **Responsive Design:** Layouts designed to adapt to different screen sizes.
-- **Book Details:** Book detail page links using book IDs.
+- **Book Details:** Individual book pages populated from the existing catalog.
+- **Book Discovery:** Search and sorting on the home page, plus saved favorites and a browser-local cart.
+- **Accessible Navigation:** Responsive sidebar navigation and a keyboard-accessible scroll-to-top control.
 - **Organized Structure:** Separate folders for pages, authentication, styles, and assets.
 
 ## 🛠️ Technologies Used
@@ -25,7 +27,7 @@ A responsive bookstore website built with **HTML, CSS, and JavaScript**. The pro
 ## 📁 Project Structure
 
 ```text
-Web/
+BookStore/
 ├── assets/
 │   └── Image/
 ├── auth/
@@ -37,11 +39,13 @@ Web/
 ├── css/
 │   └── style.css
 ├── js/
+│   └── script.js
 ├── pages/
 │   ├── business.html
 │   ├── design.html
 │   ├── programming.html
 │   └── self-development.html
+├── details.html
 └── index.html
 ```
 
@@ -63,8 +67,9 @@ Web/
 
 ## 📝 Notes
 
-- The authentication pages are currently frontend interfaces. Real authentication requires backend integration or an authentication service.
-- Some features may require JavaScript implementation or further development.
+- The authentication pages are frontend demonstrations only. Sign-in, registration, verification, and password reset require a backend or authentication service.
+- Favorites and the cart are stored in the current browser. They do not submit orders or connect to a payment service.
+- The contact form prepares a message in the visitor's default email application; it does not send messages directly from the site.
 - Make sure the asset paths match the project's folder structure.
 
 ## 🎯 Project Goal

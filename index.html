@@ -46,9 +46,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a class="login-link" href="auth/login.html">
-                <button class="login-btn" type="button">Login</button>
-            </a>
+            <a class="login-link login-btn" href="auth/login.html">Login</a>
 
         </nav>
 
@@ -92,11 +90,7 @@
                 Explore books from different categories and discover your next favorite read.
             </p>
 
-            <a href="#books">
-                <button>
-                    Explore Books
-                </button>
-            </a>
+            <a class="hero-link" href="#books">Explore Books</a>
 
         </section>
 
@@ -215,7 +209,8 @@
         <span class="search-icon">🔍</span>
 
         <input
-            type="text"
+            type="search"
+            aria-label="Search books by title, author, or description"
             placeholder="Search books..."
         >
 
@@ -280,6 +275,7 @@
 
                         
                         <button
+                            type="button"
                             class="favorite-btn"
                             aria-label="Add to favorites"
                         >
@@ -1051,12 +1047,12 @@
 
                     <p>
                         <strong>Email:</strong>
-                        mazen.os.work22@gmail.com
+                        <a href="mailto:mazen.os.work22@gmail.com">mazen.os.work22@gmail.com</a>
                     </p>
 
                     <p>
                         <strong>Phone:</strong>
-                        +20 1156326040
+                        <a href="tel:+201156326040">+20 1156326040</a>
                     </p>
 
                     <p>
@@ -1080,6 +1076,8 @@
                             type="text"
                             id="name"
                             placeholder="Enter your name"
+                            autocomplete="name"
+                            required
                         >
 
                     </div>
@@ -1095,6 +1093,8 @@
                             type="email"
                             id="email"
                             placeholder="Enter your email"
+                            autocomplete="email"
+                            required
                         >
 
                     </div>
@@ -1110,6 +1110,7 @@
                             id="message"
                             rows="6"
                             placeholder="Write your message"
+                            required
                         ></textarea>
 
                     </div>

@@ -1,7 +1,7 @@
 /* ==================================================
    BOOKSTORE — VISUAL SYSTEM
    Direction: a quiet library at dusk. Deep spruce "ink",
-   brass details, sage-white paper, burgundy bookmark badges.
+   brass details, layered dark surfaces, burgundy bookmarks.
    Display type is serif, UI type is sans. System fonts only.
 ================================================== */
 
@@ -12,31 +12,31 @@
 
 :root {
     /* Ink (deep spruce) */
-    --ink-950: #0b1f1c;
-    --ink-900: #0f2a26;
-    --ink-800: #17403a;
-    --ink-700: #21574f;
+    --ink-950: #081411;
+    --ink-900: #0d201b;
+    --ink-800: #16352c;
+    --ink-700: #1e4a3d;
 
     /* Brass */
     --brass-300: #e0c98f;
     --brass-400: #c9a659;
     --brass-500: #b08a3e;
-    --brass-600: #7e5f1b;   /* text-safe on white */
+    --brass-600: #dfc078;
 
     /* Paper & surfaces */
-    --paper: #f1f3ef;
-    --paper-2: #e8ece6;
-    --surface: #ffffff;
-    --line: #dde2db;
-    --line-strong: #c7cfc5;
+    --paper: #0b1512;
+    --paper-2: #101d19;
+    --surface: #13221d;
+    --line: #263a31;
+    --line-strong: #3a5046;
 
     /* Text */
-    --text: #1b2623;
-    --text-muted: #55645f;
+    --text: #e8eee9;
+    --text-muted: #b0beb6;
 
     /* Bookmark */
-    --ribbon: #8c2f39;
-    --ribbon-dark: #6f232c;
+    --ribbon: #a1434e;
+    --ribbon-dark: #812f38;
 
     /* Typography */
     --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -59,9 +59,9 @@
     --radius-lg: 24px;
 
     /* Shadows (tinted with the ink colour, not neutral grey) */
-    --shadow-sm: 0 1px 2px rgba(15, 42, 38, 0.06), 0 2px 8px rgba(15, 42, 38, 0.05);
-    --shadow-md: 0 8px 24px rgba(15, 42, 38, 0.10);
-    --shadow-lg: 0 20px 48px rgba(15, 42, 38, 0.16);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.16);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.28);
+    --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.38);
 
     /* Motion */
     --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -83,8 +83,9 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* عشان الناف بار ما يغطيش بداية السيكشن */
+    scroll-padding-top: 100px;
     -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
 }
 
 body {
@@ -101,7 +102,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: var(--font-display);
-    color: var(--ink-900);
+    color: var(--brass-300);
     line-height: 1.2;
     text-wrap: balance;
 }
@@ -118,7 +119,7 @@ img {
 
 input[type="checkbox"],
 input[type="radio"] {
-    accent-color: var(--ink-800);
+    accent-color: var(--brass-400);
 }
 
 :focus-visible {
@@ -201,13 +202,13 @@ button:disabled {
 }
 
 :where(.contact-form, .login-form) :where(input, textarea)::placeholder {
-    color: #8a9692;
+    color: var(--text-muted);
 }
 
 :where(.login-form) label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--ink-900);
+    color: var(--text);
 }
 
 .form-group {
@@ -219,7 +220,7 @@ button:disabled {
 .form-group label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--ink-900);
+    color: var(--text);
 }
 
 
@@ -261,7 +262,7 @@ button:disabled {
 }
 
 .search-box input::placeholder {
-    color: #8a9692;
+    color: var(--text-muted);
 }
 
 .search-box input:hover {
@@ -310,7 +311,7 @@ button:disabled {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-sm);
     background-color: var(--surface);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2355645F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23B0BEB6' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 16px center;
     background-size: 12px 8px;
@@ -349,7 +350,7 @@ button:disabled {
     padding: 0;
     border: 1px solid var(--line);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(19, 34, 29, 0.96);
     color: var(--text-muted);
     font-size: 18px;
     line-height: 1;
@@ -366,7 +367,7 @@ button:disabled {
 }
 
 .favorite-btn:hover {
-    background: #fff;
+    background: var(--paper-2);
     color: var(--ribbon);
     transform: scale(1.08);
     box-shadow: var(--shadow-md);
@@ -383,7 +384,7 @@ button:disabled {
 ================================================== */
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.88);
+    background-color: rgba(19, 34, 29, 0.92);
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(12px) saturate(140%);
     border: 1px solid var(--line);
@@ -408,7 +409,7 @@ button:disabled {
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: var(--ink-900);
+    color: var(--brass-300);
     margin: 0;
 }
 
@@ -458,7 +459,7 @@ button:disabled {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-    color: var(--ink-900);
+    color: var(--text);
 }
 
 .nav-links a:hover::after,
@@ -476,7 +477,7 @@ button:disabled {
     line-height: 1;
     cursor: pointer;
     user-select: none;
-    color: var(--ink-900);
+    color: var(--text);
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-sm);
     transition: background-color var(--dur-fast) var(--ease);
@@ -501,7 +502,7 @@ button:disabled {
 
 .login-btn {
     background-color: transparent;
-    color: var(--ink-900);
+    color: var(--brass-300);
     text-decoration: none;
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-sm);
@@ -515,8 +516,8 @@ button:disabled {
 }
 
 .login-btn:hover {
-    background-color: var(--ink-900);
-    border-color: var(--ink-900);
+    background-color: var(--ink-800);
+    border-color: var(--ink-800);
     color: #fff;
 }
 
@@ -554,7 +555,7 @@ button:disabled {
 }
 
 .hero h2 {
-    color: var(--paper);
+    color: var(--text);
     font-size: clamp(2.1rem, 5.2vw, 3.7rem);
     font-weight: 700;
     line-height: 1.08;
@@ -573,16 +574,23 @@ button:disabled {
     animation: heroText 1s var(--ease) 0.12s both;
 }
 
-.hero button {
+.hero button,
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--brass-400);
     color: var(--ink-950);
     padding: 14px 34px;
     border-radius: var(--radius-sm);
     font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
     animation: heroButton 1s var(--ease) 0.24s both;
 }
 
-.hero button:hover {
+.hero button:hover,
+.hero-link:hover {
     background-color: var(--brass-300);
     color: var(--ink-950);
 }
@@ -673,7 +681,7 @@ button:disabled {
 .category-card span {
     display: inline-block;
     margin-top: 18px;
-    color: var(--brass-600);
+    color: var(--brass-300);
     font-size: 0.95rem;
     font-weight: 600;
     transition: transform var(--dur) var(--ease);
@@ -801,7 +809,7 @@ button:disabled {
     font-size: 1.55rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: var(--ink-800);
+    color: var(--brass-300);
     margin: 0 0 16px;
 }
 
@@ -851,7 +859,7 @@ button:disabled {
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    color: var(--ink-800);
+    color: var(--brass-300);
     border: 1px solid var(--line-strong);
     padding: 11px 20px;
     border-radius: var(--radius-sm);
@@ -999,7 +1007,7 @@ button:disabled {
 .contact-info h3 {
     font-size: 1.6rem;
     margin-top: 0;
-    color: var(--paper);
+    color: var(--text);
 }
 
 .contact-info p {
@@ -1349,7 +1357,7 @@ footer a:hover {
     max-width: 500px;
     padding: 44px;
     border: 1px solid var(--line);
-    border-top: 4px solid var(--ink-800);
+    border-top: 4px solid var(--brass-500);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     text-align: center;
@@ -1391,13 +1399,13 @@ footer a:hover {
 }
 
 .login-options a {
-    color: var(--ink-700);
+    color: var(--brass-300);
     font-weight: 600;
     text-decoration: none;
 }
 
 .login-options a:hover {
-    color: var(--brass-600);
+    color: var(--brass-400);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -1422,13 +1430,13 @@ footer a:hover {
 }
 
 .register-text a {
-    color: var(--ink-700);
+    color: var(--brass-300);
     text-decoration: none;
     font-weight: 700;
 }
 
 .register-text a:hover {
-    color: var(--brass-600);
+    color: var(--brass-400);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -1436,14 +1444,14 @@ footer a:hover {
 .back-home {
     display: inline-block;
     margin-top: 16px;
-    color: var(--ink-900);
+    color: var(--brass-300);
     text-decoration: none;
     font-weight: 600;
     transition: color var(--dur-fast) var(--ease);
 }
 
 .back-home:hover {
-    color: var(--brass-600);
+    color: var(--brass-400);
 }
 
 @keyframes loginCard {
@@ -1559,7 +1567,7 @@ footer a:hover {
 
 .details-price {
     font-family: var(--font-display);
-    color: var(--ink-800);
+    color: var(--brass-300);
     font-size: 2rem;
     font-weight: 700;
     margin: 0 0 22px;
@@ -1612,7 +1620,7 @@ footer a:hover {
 }
 
 .back-books {
-    color: var(--ink-900);
+    color: var(--brass-300);
     text-decoration: none;
     font-weight: 600;
     padding: 10px 4px;
@@ -1620,7 +1628,7 @@ footer a:hover {
 }
 
 .back-books:hover {
-    color: var(--brass-600);
+    color: var(--brass-400);
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -1707,7 +1715,7 @@ footer a:hover {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-sm);
     background: var(--surface);
-    color: var(--ink-900);
+    color: var(--text);
     text-align: center;
     font-family: var(--font-display);
     font-size: 1.4rem;
@@ -1762,8 +1770,7 @@ footer a:hover {
 
 /* ==================================================
    RESPONSIVE SIDEBAR NAVIGATION
-   Desktop: sidebar enters from the left.
-   Narrow screens: sidebar enters from the right.
+   The navigation drawer is hidden on desktop and direction-aware on small screens.
 ================================================== */
 
 .navbar {
@@ -1781,7 +1788,7 @@ footer a:hover {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-sm);
     background: var(--surface);
-    color: var(--ink-900);
+    color: var(--text);
     font-size: 1.45rem;
     line-height: 1;
     box-shadow: none;
@@ -1789,7 +1796,7 @@ footer a:hover {
 
 .navbar .sidebar-toggle:hover {
     background: var(--paper-2);
-    color: var(--ink-900);
+    color: var(--text);
     box-shadow: var(--shadow-sm);
     transform: none;
 }
@@ -1881,7 +1888,7 @@ footer a:hover {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-sm);
     background: var(--paper);
-    color: var(--ink-900);
+    color: var(--text);
     font-size: 1.8rem;
     line-height: 1;
     box-shadow: none;
@@ -1917,7 +1924,7 @@ footer a:hover {
 .sidebar-nav a:focus-visible {
     padding-left: 19px;
     background: var(--paper-2);
-    color: var(--ink-900);
+    color: var(--text);
 }
 
 body.sidebar-open {
@@ -1930,12 +1937,12 @@ body.sidebar-open {
         gap: 12px;
     }
 
-    .navbar .nav-links {
+    .navbar .sidebar-toggle ~ .nav-links {
         display: none;
     }
 
-    .navbar .logo {
-        margin-right: auto;
+    .navbar .sidebar-toggle ~ .logo {
+        margin-inline-end: auto;
     }
 
     .sidebar {
@@ -1948,6 +1955,175 @@ body.sidebar-open {
 
     .sidebar.is-open {
         transform: translateX(0);
+    }
+}
+
+/* Shared feedback and utility controls */
+.site-announcement {
+    position: fixed;
+    z-index: 2100;
+    inset: auto 24px 88px;
+    width: fit-content;
+    max-width: min(92vw, 440px);
+    margin-inline: auto;
+    padding: 12px 18px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow-lg);
+}
+
+.cart-summary {
+    flex: 0 0 auto;
+    color: var(--brass-300);
+    font-size: 0.9rem;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.scroll-to-top {
+    position: fixed;
+    z-index: 1500;
+    inset: auto 24px 24px auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid var(--brass-500);
+    border-radius: 50%;
+    background: var(--ink-800);
+    color: var(--brass-300);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition:
+        opacity var(--dur) var(--ease),
+        visibility var(--dur) var(--ease),
+        transform var(--dur) var(--ease),
+        background-color var(--dur) var(--ease);
+}
+
+.scroll-to-top svg {
+    width: 21px;
+    height: 21px;
+}
+
+.scroll-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: var(--ink-700);
+    color: var(--text);
+}
+
+.scroll-to-top:focus-visible {
+    outline: 3px solid var(--brass-300);
+    outline-offset: 4px;
+}
+
+.book-card[hidden],
+.book-category[hidden] {
+    display: none;
+}
+
+.search-empty {
+    margin: 16px 0;
+    color: var(--text-muted);
+}
+
+.form-feedback {
+    margin: 0;
+    color: var(--brass-300);
+    font-size: 0.95rem;
+}
+
+.favorite-btn[aria-pressed="true"] {
+    color: var(--ribbon);
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        inset-inline-end: 18px;
+        inset-block-end: 18px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .cart-summary {
+        font-size: 0.8rem;
+    }
+
+}
+
+html:dir(rtl) .scroll-to-top {
+    left: 24px;
+    right: auto;
+}
+
+@media (max-width: 480px) {
+    html:dir(rtl) .scroll-to-top {
+        left: 18px;
+        right: auto;
+    }
+}
+
+html:dir(rtl) .search-box input {
+    padding-inline: 48px 20px;
+}
+
+html:dir(rtl) .search-icon {
+    left: auto;
+    right: 18px;
+}
+
+html:dir(rtl) .favorite-btn {
+    left: auto;
+    right: 30px;
+}
+
+html:dir(rtl) .sidebar {
+    left: auto;
+    right: 0;
+    border-left: 1px solid var(--line);
+    border-right: 0;
+    transform: translateX(105%);
+}
+
+html:dir(rtl) .sidebar.is-open {
+    transform: translateX(0);
+}
+
+html:dir(rtl) .sidebar-nav a:hover,
+html:dir(rtl) .sidebar-nav a:focus-visible {
+    padding-left: 14px;
+    padding-right: 19px;
+}
+
+html:dir(rtl) .category-card {
+    box-shadow: inset -4px 0 0 var(--ink-800), var(--shadow-sm);
+}
+
+html:dir(rtl) .category-card:hover {
+    box-shadow: inset -4px 0 0 var(--brass-500), var(--shadow-md);
+}
+
+html:dir(rtl) .book-info {
+    border-left: 1px solid var(--line);
+    border-right: 4px solid var(--brass-500);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-to-top {
+        transition: none;
     }
 }
 
@@ -1986,7 +2162,7 @@ body.sidebar-open {
 }
 
 
-/* Final responsive behavior: sidebar is mobile/tablet only and always slides from the left. */
+/* Final responsive behavior: the navigation drawer is mobile/tablet only. */
 .navbar .sidebar-toggle {
     display: none;
 }
@@ -2017,5 +2193,19 @@ body.sidebar-open {
 
     .sidebar-overlay {
         display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    html:dir(rtl) .sidebar {
+        left: auto;
+        right: 0;
+        border-left: 1px solid var(--line);
+        border-right: 0;
+        transform: translateX(105%);
+    }
+
+    html:dir(rtl) .sidebar.is-open {
+        transform: translateX(0);
     }
 }
