@@ -8,6 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/style.css">
 
     <title>BookStore</title>
@@ -15,7 +16,7 @@
 </head>
 
 
-<body>
+<body class="site-layout">
     
 
 
@@ -951,6 +952,12 @@
             </div>
 
 
+        </section>
+
+        <section id="favorites" class="favorites-section" aria-labelledby="favorites-heading">
+            <h2 id="favorites-heading">Your Favorites</h2>
+            <p class="favorites-empty" role="status">Books you save as favorites will appear here.</p>
+            <div class="book-container favorites-container"></div>
         </section>
 
 

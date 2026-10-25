@@ -10,6 +10,111 @@
     announcement.hidden = true;
     document.body.append(announcement);
 
+    const pagePath = window.location.pathname.toLocaleLowerCase();
+    const pagePrefix = /\/(auth|pages)\//.test(pagePath) ? "../" : "";
+    const homeHref = `${pagePrefix}index.html`;
+    const categoryRoutes = [
+        ["programming", "Programming", "programming"],
+        ["self-development", "Self Development", "self-development"],
+        ["business", "Business", "business"],
+        ["design", "Design", "design"]
+    ];
+    const icons = {
+        home: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3.5 10 8.5-7 8.5 7v10a1 1 0 0 1-1 1h-5v-6h-5v6h-5a1 1 0 0 1-1-1V10Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        books: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5ZM4 17a2.5 2.5 0 0 1 2.5-2.5H20M8 7h8m-8 3h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        programming: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        selfDevelopment: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20V11m0 3c0-5-3-8-8-8 0 5 3 8 8 8Zm0-3c0-4 2.5-6.5 7-7 0 4.5-2.5 7-7 7Zm-5 9h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        business: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2m-12 5h18m-11-1v2h4v-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        design: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m4 16 9.8-9.8a2.8 2.8 0 0 1 4 4L8 20H4v-4Zm7-7 4 4M4 20l4-1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        favorites: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.8 8.8c0 4.5-8.8 10-8.8 10s-8.8-5.5-8.8-10A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.7Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        about: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5m0-8h.01" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
+        contact: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        account: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M4 21a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>'
+    };
+
+    const header = document.querySelector("header");
+    if (header) {
+        const navigation = document.createElement("nav");
+        navigation.className = "navbar";
+        navigation.setAttribute("aria-label", "Main navigation");
+        navigation.innerHTML = `
+            <button class="sidebar-toggle" id="open-sidebar" type="button" aria-label="Open navigation menu" aria-controls="sidebar" aria-expanded="false">☰</button>
+            <a class="logo" href="${homeHref}">BookStore</a>
+            <div class="navbar-actions">
+                <span class="cart-summary" role="status" aria-label="0 items in cart">Cart: 0</span>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false">
+                    <span data-theme-icon aria-hidden="true"></span>
+                    <span class="theme-toggle-label" data-theme-label aria-hidden="true">Light mode</span>
+                </button>
+                <a class="login-link login-btn" href="${pagePrefix}auth/login.html">Login</a>
+            </div>`;
+        header.replaceChildren(navigation);
+
+        const overlay = document.createElement("div");
+        overlay.className = "sidebar-overlay";
+        overlay.id = "sidebar-overlay";
+        overlay.hidden = true;
+
+        const sidebar = document.createElement("aside");
+        sidebar.className = "site-sidebar";
+        sidebar.id = "sidebar";
+        sidebar.setAttribute("aria-label", "Sidebar navigation");
+        sidebar.setAttribute("aria-hidden", "false");
+        sidebar.innerHTML = `
+            <div class="site-sidebar-header">
+                <a class="site-sidebar-brand" href="${homeHref}">BookStore<span>Find your next chapter</span></a>
+                <button class="sidebar-close" id="close-sidebar" type="button" aria-label="Close navigation menu">×</button>
+            </div>
+            <nav class="sidebar-nav" aria-label="Store navigation">
+                <p class="sidebar-section-label">Store</p>
+                <a class="sidebar-link" data-nav-key="home" href="${homeHref}#home">${icons.home}<span>Home</span></a>
+                <a class="sidebar-link" data-nav-key="books" href="${homeHref}#books">${icons.books}<span>All Books</span></a>
+                <p class="sidebar-section-label">Browse categories</p>
+                ${categoryRoutes.map(([key, label, file]) => {
+                    const icon = key === "self-development" ? icons.selfDevelopment : icons[key];
+                    return `<a class="sidebar-link" data-nav-key="${key}" href="${pagePrefix}pages/${file}.html">${icon}<span>${label}</span></a>`;
+                }).join("")}
+                <p class="sidebar-section-label">Your library</p>
+                <a class="sidebar-link" data-nav-key="favorites" href="${homeHref}#favorites">${icons.favorites}<span>Favorites</span></a>
+                <p class="sidebar-section-label">More</p>
+                <a class="sidebar-link" data-nav-key="about" href="${homeHref}#about">${icons.about}<span>About Us</span></a>
+                <a class="sidebar-link" data-nav-key="contact" href="${homeHref}#contact">${icons.contact}<span>Contact</span></a>
+                <p class="sidebar-section-label">Account</p>
+                <a class="sidebar-link" data-nav-key="account" href="${pagePrefix}auth/login.html">${icons.account}<span>Sign in</span></a>
+            </nav>
+            <div class="site-sidebar-footer">
+                <button class="theme-toggle sidebar-theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false">
+                    <span data-theme-icon aria-hidden="true"></span>
+                    <span data-theme-label aria-hidden="true">Light mode</span>
+                </button>
+                <p>A little more room for good stories.</p>
+            </div>`;
+
+        header.after(overlay);
+        overlay.after(sidebar);
+
+        const updateActiveNavigation = () => {
+            const route = categoryRoutes.find(([key, , file]) => pagePath.endsWith(`/pages/${file}.html`));
+            const hashRoutes = {
+                "#books": "books",
+                "#favorites": "favorites",
+                "#about": "about",
+                "#contact": "contact"
+            };
+            const activeKey = hashRoutes[window.location.hash] ||
+                route?.[0] ||
+                (pagePath.includes("/auth/") ? "account" : pagePath.endsWith("/details.html") ? "books" : "home");
+            sidebar.querySelectorAll("[data-nav-key]").forEach((link) => {
+                if (link.dataset.navKey === activeKey) link.setAttribute("aria-current", "page");
+                else link.removeAttribute("aria-current");
+            });
+        };
+
+        updateActiveNavigation();
+        window.addEventListener("hashchange", updateActiveNavigation);
+        window.BookstoreTheme?.refresh();
+    }
+
     let announcementTimer;
 
     const announce = (message) => {
@@ -118,6 +223,8 @@
     }
     updateCartSummary();
 
+    let renderFavorites = () => {};
+
     document.addEventListener("click", (event) => {
         const favoriteButton = event.target.closest(".favorite-btn");
         if (favoriteButton) {
@@ -137,6 +244,7 @@
                     button.setAttribute("aria-label", `${isFavorite ? "Add" : "Remove"} ${title} ${isFavorite ? "to" : "from"} favorites`);
                     button.textContent = isFavorite ? "♡" : "♥";
                 });
+                renderFavorites();
                 announce(isFavorite ? `${title} removed from favorites.` : `${title} added to favorites.`);
             }
             return;
@@ -280,11 +388,26 @@
     const closeButton = document.getElementById("close-sidebar");
 
     if (sidebar && overlay && openButton && closeButton) {
+        const mobileDrawer = window.matchMedia("(max-width: 1000px)");
+        const setDrawerModalState = (isOpen) => {
+            const isModal = mobileDrawer.matches && isOpen;
+            sidebar.setAttribute("role", isModal ? "dialog" : "complementary");
+            if (isModal) sidebar.setAttribute("aria-modal", "true");
+            else sidebar.removeAttribute("aria-modal");
+            document.querySelectorAll("main, body > footer").forEach((pageRegion) => {
+                pageRegion.inert = isModal;
+            });
+        };
+        sidebar.inert = mobileDrawer.matches;
+        sidebar.setAttribute("aria-hidden", String(mobileDrawer.matches));
+        setDrawerModalState(false);
+
         const closeSidebar = (returnFocus = true) => {
             sidebar.classList.remove("is-open");
             overlay.classList.remove("is-visible");
-            sidebar.setAttribute("aria-hidden", "true");
-            sidebar.inert = true;
+            sidebar.setAttribute("aria-hidden", String(mobileDrawer.matches));
+            sidebar.inert = mobileDrawer.matches;
+            setDrawerModalState(false);
             openButton.setAttribute("aria-expanded", "false");
             document.body.classList.remove("sidebar-open");
             window.setTimeout(() => {
@@ -296,12 +419,13 @@
         openButton.addEventListener("click", () => {
             sidebar.classList.add("is-open");
             overlay.hidden = false;
-            window.requestAnimationFrame(() => overlay.classList.add("is-visible"));
+            overlay.classList.add("is-visible");
             sidebar.setAttribute("aria-hidden", "false");
             sidebar.inert = false;
+            setDrawerModalState(true);
             openButton.setAttribute("aria-expanded", "true");
             document.body.classList.add("sidebar-open");
-            window.requestAnimationFrame(() => closeButton.focus());
+            closeButton.focus();
         });
         closeButton.addEventListener("click", () => closeSidebar());
         overlay.addEventListener("click", () => closeSidebar());
@@ -323,9 +447,30 @@
                 }
             }
         });
-        window.addEventListener("resize", () => {
-            if (window.innerWidth > 1000 && sidebar.classList.contains("is-open")) closeSidebar(false);
-        });
+        const handleDrawerBreakpointChange = () => {
+            if (mobileDrawer.matches) {
+                if (!sidebar.classList.contains("is-open")) {
+                    sidebar.setAttribute("aria-hidden", "true");
+                    sidebar.inert = true;
+                    setDrawerModalState(false);
+                }
+                return;
+            }
+
+            sidebar.classList.remove("is-open");
+            overlay.classList.remove("is-visible");
+            overlay.hidden = true;
+            sidebar.setAttribute("aria-hidden", "false");
+            sidebar.inert = false;
+            setDrawerModalState(false);
+            openButton.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("sidebar-open");
+        };
+        if (mobileDrawer.addEventListener) {
+            mobileDrawer.addEventListener("change", handleDrawerBreakpointChange);
+        } else {
+            mobileDrawer.addListener(handleDrawerBreakpointChange);
+        }
     }
 
     const contactForm = document.querySelector(".contact-form");
@@ -412,6 +557,64 @@
         23: ["Universal Principles of Design", "William Lidwell et al.", "Essential principles for effective design", 55, "Design/Universal Principles of Design.jpeg", "design"],
         24: ["Sprint", "Jake Knapp et al.", "Process for solving problems quickly", 45, "Design/Sprint.jpeg", "design"]
     };
+
+    const favoritesSection = document.querySelector(".favorites-section");
+    if (favoritesSection) {
+        const favoritesContainer = favoritesSection.querySelector(".favorites-container");
+        const emptyMessage = favoritesSection.querySelector(".favorites-empty");
+        renderFavorites = () => {
+            const favoriteBooks = Object.entries(catalog)
+                .filter(([, book]) => favoriteTitles.has(bookSlug(book[0])))
+                .sort(([, left], [, right]) => left[0].localeCompare(right[0]));
+
+            favoritesContainer.replaceChildren();
+            emptyMessage.hidden = favoriteBooks.length > 0;
+            favoriteBooks.forEach(([id, book]) => {
+                const [title, author, description, price, image] = book;
+                const card = document.createElement("article");
+                card.className = "book-card";
+                card.dataset.bookTitle = title;
+
+                const favoriteButton = document.createElement("button");
+                favoriteButton.type = "button";
+                favoriteButton.className = "favorite-btn";
+                favoriteButton.dataset.bookTitle = title;
+                favoriteButton.setAttribute("aria-pressed", "true");
+                favoriteButton.setAttribute("aria-label", `Remove ${title} from favorites`);
+                favoriteButton.textContent = "♥";
+
+                const cover = document.createElement("img");
+                cover.src = `assets/Image/${image}`;
+                cover.alt = title;
+
+                const heading = document.createElement("h3");
+                heading.textContent = title;
+                const authorText = document.createElement("p");
+                authorText.textContent = author;
+                const descriptionText = document.createElement("p");
+                descriptionText.className = "description";
+                descriptionText.textContent = description;
+                const priceText = document.createElement("p");
+                priceText.className = "price";
+                priceText.textContent = `$${price}`;
+
+                const actions = document.createElement("div");
+                actions.className = "book-buttons";
+                const detailsLink = document.createElement("a");
+                detailsLink.className = "details-btn";
+                detailsLink.href = `details.html?id=${id}`;
+                detailsLink.textContent = "View Details";
+                const addButton = document.createElement("button");
+                addButton.type = "button";
+                addButton.textContent = "Add To Cart";
+                actions.append(detailsLink, addButton);
+
+                card.append(favoriteButton, cover, heading, authorText, descriptionText, priceText, actions);
+                favoritesContainer.append(card);
+            });
+        };
+        renderFavorites();
+    }
 
     const detailsSection = document.querySelector(".book-details");
     if (detailsSection) {

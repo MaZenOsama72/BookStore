@@ -14,7 +14,8 @@ A responsive bookstore website built with **HTML, CSS, and JavaScript**. The pro
 - **Responsive Design:** Layouts designed to adapt to different screen sizes.
 - **Book Details:** Individual book pages populated from the existing catalog.
 - **Book Discovery:** Search and sorting on the home page, plus saved favorites and a browser-local cart.
-- **Accessible Navigation:** Responsive sidebar navigation and a keyboard-accessible scroll-to-top control.
+- **Accessible Navigation:** A shared responsive sidebar across all pages and a keyboard-accessible scroll-to-top control.
+- **Theme Preferences:** Persistent dark and light themes shared across pages and synchronized between browser tabs.
 - **Organized Structure:** Separate folders for pages, authentication, styles, and assets.
 
 ## 🛠️ Technologies Used
@@ -39,6 +40,7 @@ BookStore/
 ├── css/
 │   └── style.css
 ├── js/
+│   ├── theme.js
 │   └── script.js
 ├── pages/
 │   ├── business.html
@@ -69,6 +71,7 @@ BookStore/
 
 - The authentication pages are frontend demonstrations only. Sign-in, registration, verification, and password reset require a backend or authentication service.
 - Favorites and the cart are stored in the current browser. They do not submit orders or connect to a payment service.
+- The selected color theme is stored as a browser-local preference.
 - The contact form prepares a message in the visitor's default email application; it does not send messages directly from the site.
 - Make sure the asset paths match the project's folder structure.
 
